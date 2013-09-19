@@ -1,4 +1,5 @@
 language: perl
+perl:
 
 before_install:
     - sudo apt-get update
