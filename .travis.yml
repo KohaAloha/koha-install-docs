@@ -5,10 +5,12 @@ before_install:
     - perlbrew switch-off
     - sudo apt-get update
     - sudo apt-get clean
+    - sudo apt-get install lynx wget curl
 
     - export DEBIAN_FRONTEND=noninteractive
     - sudo apt-get -q -y install mysql-server
     - mysqladmin -u root password nerfnerf
+    - export DEBIAN_FRONTEND=interactive
 
 install:
     - echo 'deb http://debian.koha-community.org/koha squeeze main' | sudo tee /etc/apt/sources.list.d/koha.list
@@ -26,7 +28,7 @@ install:
 
     - cat /etc/apache2/ports.conf
 
-    - sudo apt-get install curl
+
     - cd /etc/koha
     - sudo curl -O  https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
     - cat /etc/koha/koha-sites.conf
@@ -40,7 +42,6 @@ install:
     - sudo koha-create --create-db lib1
     - sudo a2ensite lib1
 
-    - sudo apt-get install lynx wget
 
     - wget  http://127.0.1.1:80 -O /tmp/opac.html
     - wget  http://127.0.1.1:8080 -O /tmp/staff.html
