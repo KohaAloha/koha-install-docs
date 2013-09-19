@@ -13,7 +13,7 @@ before_install:
     - export DEBIAN_FRONTEND=noninteractive
     - sudo apt-get -q -y install mysql-server
     - mysqladmin -u root password nerfnerf
-    - export DEBIAN_FRONTEND=''
+    - export DEBIAN_FRONTEND=newt
 
 install:
     - echo 'deb http://debian.koha-community.org/koha squeeze main' | sudo tee /etc/apt/sources.list.d/koha.list
