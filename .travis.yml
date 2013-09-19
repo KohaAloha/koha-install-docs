@@ -23,11 +23,12 @@ install:
     - sudo cp -v debian/templates/koha-sites.conf /etc/koha
 
     - cat /etc/apache2/ports.conf
+
+    - sudo apt-get install curl
+    - cd /etc/koha
+    - curl -O  https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
     - cat /etc/koha/koha-sites.conf
 
-#    - sudo apt-get install curl
-#    - cd /etc/koha
-#    - curl -O  https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
 
     - sudo a2dissite 000-default
     - sudo a2enmod rewrite
