@@ -17,7 +17,7 @@ before_install:
 install:
     - echo 'deb http://debian.koha-community.org/koha squeeze main' | sudo tee /etc/apt/sources.list.d/koha.list
 
-    - wget -O - http://debian.koha-community.org/koha/gpg.asc | sudo apt-key add -
+    - sudo wget -O - http://debian.koha-community.org/koha/gpg.asc | sudo apt-key add -
 
     - sudo apt-get update
     - sudo apt-get install koha-common > /dev/null
