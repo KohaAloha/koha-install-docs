@@ -28,6 +28,10 @@ install:
     - echo 'Listen 80'              | sudo tee -a /etc/apache2/ports.conf
     - echo 'Listen 8080'            | sudo tee -a /etc/apache2/ports.conf
 
+
+    - echo '127.0.0.1    lib1.localhost' | sudo tee -a /etc/hosts
+    - echo '127.0.0.1    lib1-intra.localhost' | sudo tee -a /etc/hosts
+
 #    - sudo cp -v debian/templates/koha-sites.conf /etc/koha
 
     - cat /etc/apache2/ports.conf
@@ -51,10 +55,21 @@ install:
     - cat /etc/hosts
 
 
-    - wget  http://127.0.1.1:80 -O /tmp/opac.html
+    - wget  http://127.0.1.1 -O /tmp/opac.html
     - wget  http://127.0.1.1:8080 -O /tmp/staff.html
+
+    - wget  http://lib1.localhost -O /tmp/opac2.html
+    - wget  http://lib1-intra.localhost -O /tmp/staff2.html
+
+
+
     - cat /tmp/opac.html
     - cat /tmp/staff.html
+
+    - cat /tmp/opac2.html
+    - cat /tmp/staff2.html
+
+
 
 script:
     - echo 0
