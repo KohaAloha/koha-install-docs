@@ -17,7 +17,7 @@ before_install:
 install:
     - echo 'deb http://debian.koha-community.org/koha squeeze main' | sudo tee /etc/apt/sources.list.d/koha.list
 
-    - sudo wget -O - http://debian.koha-community.org/koha/gpg.asc | sudo apt-key add -
+    - wget -O - http://debian.koha-community.org/koha/gpg.asc | sudo apt-key add -
 
     - sudo apt-get update
     - sudo apt-get install koha-common > /dev/null
@@ -33,7 +33,7 @@ install:
 
 #    - cd /etc/koha
 #    - sudo curl -O  https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
-    - wget -O /etc/koha/koha-sites.conf https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
+    - sudo wget -O /etc/koha/koha-sites.conf https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
 
 
 
