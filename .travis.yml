@@ -9,6 +9,7 @@ before_install:
     - sudo apt-get clean
     - sudo apt-get install lynx wget curl
 
+    - export
     - export DEBIAN_FRONTEND=noninteractive
     - sudo apt-get -q -y install mysql-server
     - mysqladmin -u root password nerfnerf
