@@ -29,8 +29,12 @@ install:
     - cat /etc/apache2/ports.conf
 
 
-    - cd /etc/koha
-    - sudo curl -O  https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
+#    - cd /etc/koha
+#    - sudo curl -O  https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
+    - wget -O /etc/koha/koha-sites.conf https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
+
+
+
     - cat /etc/koha/koha-sites.conf
 
 
