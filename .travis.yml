@@ -47,7 +47,7 @@ install:
     - sudo koha-create --create-db lib1
     - sudo a2ensite lib1
 
-    - cat /etc/apache2/site-enabled/lib1
+    - cat /etc/apache2/sites-enabled/lib1
     - cat /etc/hosts
 
 
