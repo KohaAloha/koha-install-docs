@@ -6,7 +6,7 @@ perl:
 before_install:
 #    - perlbrew switch-off
     - sudo apt-get update
-    - sudo apt-get upgrade
+#    - sudo apt-get upgrade
     - sudo apt-get clean
     - sudo apt-get install lynx wget curl
 
