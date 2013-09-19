@@ -28,7 +28,7 @@ install:
 
     - sudo apt-get install curl
     - cd /etc/koha
-    - curl -O  https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
+    - sudo curl -O  https://raw.github.com/KohaAloha/Koha-Dev/trav-packages/debian/templates/koha-sites.conf
     - cat /etc/koha/koha-sites.conf
 
 
