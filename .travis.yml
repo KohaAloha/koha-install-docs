@@ -1,7 +1,7 @@
 language: perl
 
 # system perl
-#perl:
+perl:
 
 before_install:
     - perlbrew switch-off
