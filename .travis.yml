@@ -2,6 +2,7 @@ language: perl
 perl:
 
 before_install:
+    - perlbrew switch-off
     - sudo apt-get update
     - sudo apt-get clean
 
