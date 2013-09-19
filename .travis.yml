@@ -42,10 +42,10 @@ install:
 
     - sudo apt-get install lynx wget
 
-    - wget  http://127.0.1.1:80 -O opac.html
-    - wget  http://127.0.1.1:8080 -O staff.html
-    - cat opac.html
-    - cat staff.html
+    - wget  http://127.0.1.1:80 -O /tmp/opac.html
+    - wget  http://127.0.1.1:8080 -O /tmp/staff.html
+    - cat /tmp/opac.html
+    - cat /tmp/staff.html
 
 script:
     - echo 0
