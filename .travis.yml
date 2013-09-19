@@ -46,7 +46,9 @@ install:
 
     - sudo koha-create --create-db lib1
     - sudo a2ensite lib1
-    - sudo cat /etc/apache2/site-enabled/lib1
+
+    - cat /etc/apache2/site-enabled/lib1
+    - cat /etc/hosts
 
 
     - wget  http://127.0.1.1:80 -O /tmp/opac.html
