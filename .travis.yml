@@ -12,7 +12,7 @@ before_install:
 
     - export
     - export DEBIAN_FRONTEND=noninteractive
-    - sudo apt-get -q -y install mysql-server
+    - sudo apt-get -q -y install mysql-server nullmailer
     - mysqladmin -u root password nerfnerf
     - export DEBIAN_FRONTEND=text
 
