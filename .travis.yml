@@ -50,6 +50,9 @@ install:
     - sudo apache2ctl restart
 
     - sudo koha-create --create-db lib1
+    - mysql -u root -pnerfnerf -e 'show databases'
+    - mysql -u root -pnerfnerf koha_lib1 -e 'show tables'
+
     - sudo a2ensite lib1
 
     - sudo cat /etc/apache2/sites-enabled/lib1
