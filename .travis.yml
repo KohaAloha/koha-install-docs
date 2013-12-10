@@ -33,6 +33,8 @@ install:
     - echo '127.0.0.1    lib1.localhost' | sudo tee -a /etc/hosts
     - echo '127.0.0.1    lib1-intra.localhost' | sudo tee -a /etc/hosts
 
+    - echo 'ServerName localhost' | sudo tee -a /etc/apache2/apache2.conf
+
 #    - sudo cp -v debian/templates/koha-sites.conf /etc/koha
 
     - cat /etc/apache2/ports.conf
